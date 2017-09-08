@@ -1,0 +1,7 @@
+com/sensedia/api/v3/APIsApiTest.class
+com/sensedia/api/v3/AppsApiTest.class
+com/sensedia/api/v3/PlansApiTest.class
+com/sensedia/api/v3/CallsApiTest.class
+com/sensedia/api/v3/AccessTokensApiTest.class
+com/sensedia/api/v3/MetricsApiTest.class
+com/sensedia/api/v3/DevelopersApiTest.class
