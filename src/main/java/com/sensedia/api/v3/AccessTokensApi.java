@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class AccessTokensApi {
   private ApiClient apiClient;
 
@@ -39,12 +39,17 @@ public class AccessTokensApi {
   /**
    * Retrieve access token total
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return Long
    * @throws ApiException if fails to make API call
    */
   public Long accessTokenCount1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling accessTokenCount1");
+    }
     
     // create path and map variables
     String localVarPath = "/access-tokens/count";
@@ -77,13 +82,18 @@ public class AccessTokensApi {
   /**
    * Create a new access token
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param bean Access token json to create a new access token. (optional)
    * @return AccessToken
    * @throws ApiException if fails to make API call
    */
   public AccessToken createAccessToken1(String sensediaAuth, AccessToken bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createAccessToken1");
+    }
     
     // create path and map variables
     String localVarPath = "/access-tokens";
@@ -116,7 +126,7 @@ public class AccessTokensApi {
   /**
    * Find access token list by filters
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param code code (optional)
    * @param owner owner (optional)
    * @param status staus(ACTIVE, REVOKED, EXPIRED) (optional)
@@ -135,6 +145,11 @@ public class AccessTokensApi {
    */
   public List<AccessToken> getAccessToken1(String sensediaAuth, String code, String owner, String status, Long expiresIn, String refreshToken, String scope, String keyword, Integer actualPage, Integer pageSize, String authIds, String beginDate, String endDate, String extraFields) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAccessToken1");
+    }
     
     // create path and map variables
     String localVarPath = "/access-tokens";
@@ -180,13 +195,18 @@ public class AccessTokensApi {
   /**
    * Retrive changelog per access token id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Access token id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;ChangeLogBean&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<ChangeLogBean> getChangeLogByAccessTokenId1(Long id, String sensediaAuth) throws ApiException {
+  public List<ChangeLogBean> getChangeLogByAccessTokenId1(String sensediaAuth, Long id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getChangeLogByAccessTokenId1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -225,13 +245,18 @@ public class AccessTokensApi {
   /**
    * Find access token by code
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param code Code (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return AccessToken
    * @throws ApiException if fails to make API call
    */
-  public AccessToken getTokenByCode1(String code, String sensediaAuth) throws ApiException {
+  public AccessToken getTokenByCode1(String sensediaAuth, String code) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getTokenByCode1");
+    }
     
     // verify the required parameter 'code' is set
     if (code == null) {
@@ -270,12 +295,17 @@ public class AccessTokensApi {
   /**
    * Remove a access token
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id App id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @throws ApiException if fails to make API call
    */
-  public void removeAccessToken1(String id, String sensediaAuth) throws ApiException {
+  public void removeAccessToken1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removeAccessToken1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -314,14 +344,19 @@ public class AccessTokensApi {
   /**
    * Update a access token
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Access token id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param bean Access token json to update a access token. (optional)
    * @return AccessTokenResponse
    * @throws ApiException if fails to make API call
    */
-  public AccessTokenResponse updateAccesstoken1(String id, String sensediaAuth, AccessToken bean) throws ApiException {
+  public AccessTokenResponse updateAccesstoken1(String sensediaAuth, String id, AccessToken bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling updateAccesstoken1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -360,13 +395,18 @@ public class AccessTokensApi {
   /**
    * Validate partial access token
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param bean Access token json to validate a access token. (optional)
    * @return Object
    * @throws ApiException if fails to make API call
    */
   public Object validatePartialAccessToken1(String sensediaAuth, AccessToken bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling validatePartialAccessToken1");
+    }
     
     // create path and map variables
     String localVarPath = "/access-tokens/validate";

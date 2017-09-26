@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="cloneApi1"></a>
 # **cloneApi1**
-> ModelAPIResponse cloneApi1(id, sensediaAuth, apiBean)
+> ModelAPIResponse cloneApi1(sensediaAuth, id, apiBean)
 
 Clone a API
 
@@ -32,11 +32,11 @@ Clone a API
 
 
 APIsApi apiInstance = new APIsApi();
-String id = "id_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | API id
 API apiBean = new API(); // API | API json to update a api
 try {
-    ModelAPIResponse result = apiInstance.cloneApi1(id, sensediaAuth, apiBean);
+    ModelAPIResponse result = apiInstance.cloneApi1(sensediaAuth, id, apiBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#cloneApi1");
@@ -48,8 +48,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **apiBean** | [**API**](API.md)| API json to update a api | [optional]
 
 ### Return type
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **bean** | [**APICreateBean**](APICreateBean.md)| API json to create a API | [optional]
 
 ### Return type
@@ -112,7 +112,7 @@ No authorization required
 
 <a name="createNewVersion1"></a>
 # **createNewVersion1**
-> ModelAPIResponse createNewVersion1(id, sensediaAuth, apiBean)
+> ModelAPIResponse createNewVersion1(sensediaAuth, id, apiBean)
 
 Create new version
 
@@ -124,11 +124,11 @@ Create new version
 
 
 APIsApi apiInstance = new APIsApi();
-String id = "id_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | API id
 API apiBean = new API(); // API | API json to update a api
 try {
-    ModelAPIResponse result = apiInstance.createNewVersion1(id, sensediaAuth, apiBean);
+    ModelAPIResponse result = apiInstance.createNewVersion1(sensediaAuth, id, apiBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#createNewVersion1");
@@ -140,8 +140,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **apiBean** | [**API**](API.md)| API json to update a api | [optional]
 
 ### Return type
@@ -159,7 +159,7 @@ No authorization required
 
 <a name="getApiById1"></a>
 # **getApiById1**
-> API getApiById1(apiId, sensediaAuth, filter)
+> API getApiById1(sensediaAuth, apiId, filter)
 
 Find API by id
 
@@ -171,11 +171,11 @@ Find API by id
 
 
 APIsApi apiInstance = new APIsApi();
-String apiId = "apiId_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String apiId = "apiId_example"; // String | API id
 String filter = "filter_example"; // String | Filter type searched
 try {
-    API result = apiInstance.getApiById1(apiId, sensediaAuth, filter);
+    API result = apiInstance.getApiById1(sensediaAuth, apiId, filter);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#getApiById1");
@@ -187,8 +187,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **apiId** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **filter** | **String**| Filter type searched | [optional] [enum: BASIC, BASIC_WITHOUT_INTERCEPTORS, BASIC_TO_DASHBOARD, BASIC_WITH_LAST_REVISION]
 
 ### Return type
@@ -234,7 +234,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **privateAPI** | **Boolean**| Private API | [optional]
  **filter** | **String**| Filter type searched | [optional] [enum: BASIC, BASIC_WITHOUT_INTERCEPTORS, BASIC_TO_DASHBOARD, BASIC_WITH_LAST_REVISION]
 
@@ -253,7 +253,7 @@ No authorization required
 
 <a name="getChangeLogByApiId1"></a>
 # **getChangeLogByApiId1**
-> List&lt;ChangeLog&gt; getChangeLogByApiId1(id, sensediaAuth)
+> List&lt;ChangeLog&gt; getChangeLogByApiId1(sensediaAuth, id)
 
 Retrive changelog per API id
 
@@ -265,10 +265,10 @@ Retrive changelog per API id
 
 
 APIsApi apiInstance = new APIsApi();
-Long id = 789L; // Long | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Long id = 789L; // Long | API id
 try {
-    List<ChangeLog> result = apiInstance.getChangeLogByApiId1(id, sensediaAuth);
+    List<ChangeLog> result = apiInstance.getChangeLogByApiId1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#getChangeLogByApiId1");
@@ -280,8 +280,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **Long**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -298,7 +298,7 @@ No authorization required
 
 <a name="getLastRevisionByApi1"></a>
 # **getLastRevisionByApi1**
-> RevisionBean getLastRevisionByApi1(id, sensediaAuth)
+> RevisionBean getLastRevisionByApi1(sensediaAuth, id)
 
 Find last revision by API id
 
@@ -310,10 +310,10 @@ Find last revision by API id
 
 
 APIsApi apiInstance = new APIsApi();
-Long id = 789L; // Long | id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Long id = 789L; // Long | id
 try {
-    RevisionBean result = apiInstance.getLastRevisionByApi1(id, sensediaAuth);
+    RevisionBean result = apiInstance.getLastRevisionByApi1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#getLastRevisionByApi1");
@@ -325,8 +325,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **Long**| id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -343,7 +343,7 @@ No authorization required
 
 <a name="getVersionsByApi1"></a>
 # **getVersionsByApi1**
-> List&lt;API&gt; getVersionsByApi1(id, sensediaAuth)
+> List&lt;API&gt; getVersionsByApi1(sensediaAuth, id)
 
 Find version by API id
 
@@ -355,10 +355,10 @@ Find version by API id
 
 
 APIsApi apiInstance = new APIsApi();
-String id = "id_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | API id
 try {
-    List<API> result = apiInstance.getVersionsByApi1(id, sensediaAuth);
+    List<API> result = apiInstance.getVersionsByApi1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#getVersionsByApi1");
@@ -370,8 +370,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -388,7 +388,7 @@ No authorization required
 
 <a name="removeApi1"></a>
 # **removeApi1**
-> ResponseEntity removeApi1(id, sensediaAuth)
+> ResponseEntity removeApi1(sensediaAuth, id)
 
 Delete a API
 
@@ -400,10 +400,10 @@ Delete a API
 
 
 APIsApi apiInstance = new APIsApi();
-String id = "id_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | API id
 try {
-    ResponseEntity result = apiInstance.removeApi1(id, sensediaAuth);
+    ResponseEntity result = apiInstance.removeApi1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#removeApi1");
@@ -415,8 +415,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -433,7 +433,7 @@ No authorization required
 
 <a name="removeLinkEnvironmentWithApi1"></a>
 # **removeLinkEnvironmentWithApi1**
-> ResponseEntity removeLinkEnvironmentWithApi1(id, environmentId, sensediaAuth)
+> ResponseEntity removeLinkEnvironmentWithApi1(sensediaAuth, id, environmentId)
 
 Delete environment link with API
 
@@ -445,11 +445,11 @@ Delete environment link with API
 
 
 APIsApi apiInstance = new APIsApi();
+String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 String id = "id_example"; // String | id
 String environmentId = "environmentId_example"; // String | environmentId
-String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 try {
-    ResponseEntity result = apiInstance.removeLinkEnvironmentWithApi1(id, environmentId, sensediaAuth);
+    ResponseEntity result = apiInstance.removeLinkEnvironmentWithApi1(sensediaAuth, id, environmentId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#removeLinkEnvironmentWithApi1");
@@ -461,9 +461,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| id |
  **environmentId** | **String**| environmentId |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -480,7 +480,7 @@ No authorization required
 
 <a name="updateApi1"></a>
 # **updateApi1**
-> ModelAPIResponse updateApi1(id, sensediaAuth, apiBean)
+> ModelAPIResponse updateApi1(sensediaAuth, id, apiBean)
 
 Update a API
 
@@ -492,11 +492,11 @@ Update a API
 
 
 APIsApi apiInstance = new APIsApi();
-String id = "id_example"; // String | API id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | API id
 API apiBean = new API(); // API | API json to update a api
 try {
-    ModelAPIResponse result = apiInstance.updateApi1(id, sensediaAuth, apiBean);
+    ModelAPIResponse result = apiInstance.updateApi1(sensediaAuth, id, apiBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling APIsApi#updateApi1");
@@ -508,8 +508,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| API id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **apiBean** | [**API**](API.md)| API json to update a api | [optional]
 
 ### Return type
@@ -554,7 +554,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **bean** | [**API**](API.md)| API json to validate a API | [optional]
 
 ### Return type

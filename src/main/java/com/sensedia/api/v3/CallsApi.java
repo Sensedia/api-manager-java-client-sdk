@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class CallsApi {
   private ApiClient apiClient;
 
@@ -38,13 +38,18 @@ public class CallsApi {
   /**
    * Retrive call by id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Call id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return Call
    * @throws ApiException if fails to make API call
    */
-  public Call retriveCallById1(String id, String sensediaAuth) throws ApiException {
+  public Call retriveCallById1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveCallById1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -83,7 +88,7 @@ public class CallsApi {
   /**
    * Retrive calls with filters
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param actualPage Number of the page in pagination. The starting page number is zero. (optional)
    * @param baseUris Base uris (optional)
    * @param appTokenCode Code app token (optional)
@@ -109,6 +114,11 @@ public class CallsApi {
    */
   public CallResponse retriveCallsWithFiltrs1(String sensediaAuth, Integer actualPage, String baseUris, String appTokenCode, Integer pageSize, String appTokenName, String authTokenOwner, Long apiId, Long operationId, Long resourceId, Long environmentId, Long revisionId, String uri, String customSearch, String method, Integer httpStatusFrom, Integer httpStatusTo, String beginDate, String endDate, String appDeveloper, String forceDownload) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveCallsWithFiltrs1");
+    }
     
     // create path and map variables
     String localVarPath = "/calls";
@@ -161,14 +171,19 @@ public class CallsApi {
   /**
    * Retrive calls total by date
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param date Date searched (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param apiId API id (optional)
    * @return Long
    * @throws ApiException if fails to make API call
    */
-  public Long retriveTotalCallsByDate1(String date, String sensediaAuth, Long apiId) throws ApiException {
+  public Long retriveTotalCallsByDate1(String sensediaAuth, String date, Long apiId) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveTotalCallsByDate1");
+    }
     
     // verify the required parameter 'date' is set
     if (date == null) {

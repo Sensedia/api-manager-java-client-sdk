@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **resolution** | **String**| Metric resolution | [optional] [enum: months, days, hours, minutes]
@@ -97,7 +97,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **resolution** | **String**| Metric resolution | [optional] [enum: months, days, hours, minutes]
@@ -150,7 +150,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **apiId** | **Long**| API id | [optional]
  **revisionId** | **Long**| Revision id | [optional]
  **operationId** | **Long**| Operation id | [optional]
@@ -207,7 +207,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **apiId** | **Long**| API id | [optional]
  **revisionId** | **Long**| Revision id | [optional]
  **operationId** | **Long**| Operation id | [optional]
@@ -261,7 +261,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **apiId** | **Long**| API id | [optional]
  **revisionId** | **Long**| Revision id | [optional]
  **operationId** | **Long**| Operation id | [optional]
@@ -314,7 +314,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **resolution** | **String**| Metric resolution | [optional] [enum: months, days, hours, minutes]
@@ -364,7 +364,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **healthPortal** | **Boolean**| Health Portal | [optional]
 
 ### Return type
@@ -411,7 +411,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **resolution** | **String**| Metric resolution | [optional] [enum: months, days, hours, minutes]
@@ -457,7 +457,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -474,7 +474,7 @@ No authorization required
 
 <a name="getTopAccessTokens1"></a>
 # **getTopAccessTokens1**
-> List&lt;TopAccessToken&gt; getTopAccessTokens1(howMany, sensediaAuth, beginDate, endDate, status, resolution)
+> List&lt;TopAccessToken&gt; getTopAccessTokens1(sensediaAuth, howMany, beginDate, endDate, status, resolution)
 
 Find top access token
 
@@ -486,14 +486,14 @@ Find top access token
 
 
 MetricsApi apiInstance = new MetricsApi();
-Integer howMany = 56; // Integer | How many
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Integer howMany = 56; // Integer | How many
 String beginDate = "beginDate_example"; // String | Begin date
 String endDate = "endDate_example"; // String | End date
 String status = "status_example"; // String | Metric status
 String resolution = "resolution_example"; // String | Metric resolution
 try {
-    List<TopAccessToken> result = apiInstance.getTopAccessTokens1(howMany, sensediaAuth, beginDate, endDate, status, resolution);
+    List<TopAccessToken> result = apiInstance.getTopAccessTokens1(sensediaAuth, howMany, beginDate, endDate, status, resolution);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MetricsApi#getTopAccessTokens1");
@@ -505,8 +505,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **howMany** | **Integer**| How many |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **status** | **String**| Metric status | [optional] [enum: success, error, clientError, serverError, blocked]
@@ -527,7 +527,7 @@ No authorization required
 
 <a name="getTopApps1"></a>
 # **getTopApps1**
-> List&lt;TopApp&gt; getTopApps1(howMany, sensediaAuth, beginDate, endDate, status, resolution)
+> List&lt;TopApp&gt; getTopApps1(sensediaAuth, howMany, beginDate, endDate, status, resolution)
 
 Find top apps
 
@@ -539,14 +539,14 @@ Find top apps
 
 
 MetricsApi apiInstance = new MetricsApi();
-Integer howMany = 56; // Integer | How many
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Integer howMany = 56; // Integer | How many
 String beginDate = "beginDate_example"; // String | Begin date
 String endDate = "endDate_example"; // String | End date
 String status = "status_example"; // String | Metric status
 String resolution = "resolution_example"; // String | Metric resolution
 try {
-    List<TopApp> result = apiInstance.getTopApps1(howMany, sensediaAuth, beginDate, endDate, status, resolution);
+    List<TopApp> result = apiInstance.getTopApps1(sensediaAuth, howMany, beginDate, endDate, status, resolution);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling MetricsApi#getTopApps1");
@@ -558,8 +558,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **howMany** | **Integer**| How many |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **beginDate** | **String**| Begin date | [optional]
  **endDate** | **String**| End date | [optional]
  **status** | **String**| Metric status | [optional] [enum: success, error, clientError, serverError, blocked]

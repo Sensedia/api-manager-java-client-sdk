@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PlanSimpleBean
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class PlanSimpleBean {
   @JsonProperty("defaultPlan")
   private Boolean defaultPlan = null;

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="clonePlan1"></a>
 # **clonePlan1**
-> PlanResponse clonePlan1(id, sensediaAuth)
+> PlanResponse clonePlan1(sensediaAuth, id)
 
 Clone a plan
 
@@ -30,10 +30,10 @@ Clone a plan
 
 
 PlansApi apiInstance = new PlansApi();
-String id = "id_example"; // String | Plan id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Plan id
 try {
-    PlanResponse result = apiInstance.clonePlan1(id, sensediaAuth);
+    PlanResponse result = apiInstance.clonePlan1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#clonePlan1");
@@ -45,8 +45,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Plan id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -63,7 +63,7 @@ No authorization required
 
 <a name="createPlan1"></a>
 # **createPlan1**
-> PlanResponse createPlan1(planBean, sensediaAuth)
+> PlanResponse createPlan1(sensediaAuth, planBean)
 
 Create a new plan
 
@@ -75,10 +75,10 @@ Create a new plan
 
 
 PlansApi apiInstance = new PlansApi();
-PlanResponse planBean = new PlanResponse(); // PlanResponse | planBean
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+PlanResponse planBean = new PlanResponse(); // PlanResponse | planBean
 try {
-    PlanResponse result = apiInstance.createPlan1(planBean, sensediaAuth);
+    PlanResponse result = apiInstance.createPlan1(sensediaAuth, planBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#createPlan1");
@@ -90,8 +90,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **planBean** | [**PlanResponse**](PlanResponse.md)| planBean |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -134,7 +134,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -151,7 +151,7 @@ No authorization required
 
 <a name="getChangeLogByPlanId1"></a>
 # **getChangeLogByPlanId1**
-> List&lt;ChangeLogBean&gt; getChangeLogByPlanId1(id, sensediaAuth)
+> List&lt;ChangeLogBean&gt; getChangeLogByPlanId1(sensediaAuth, id)
 
 Retrive changelog per plan id
 
@@ -163,10 +163,10 @@ Retrive changelog per plan id
 
 
 PlansApi apiInstance = new PlansApi();
-Long id = 789L; // Long | id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Long id = 789L; // Long | id
 try {
-    List<ChangeLogBean> result = apiInstance.getChangeLogByPlanId1(id, sensediaAuth);
+    List<ChangeLogBean> result = apiInstance.getChangeLogByPlanId1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#getChangeLogByPlanId1");
@@ -178,8 +178,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **Long**| id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -196,7 +196,7 @@ No authorization required
 
 <a name="getPlanById1"></a>
 # **getPlanById1**
-> PlanResponse getPlanById1(id, sensediaAuth)
+> PlanResponse getPlanById1(sensediaAuth, id)
 
 Find plan by id
 
@@ -208,10 +208,10 @@ Find plan by id
 
 
 PlansApi apiInstance = new PlansApi();
-String id = "id_example"; // String | id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | id
 try {
-    PlanResponse result = apiInstance.getPlanById1(id, sensediaAuth);
+    PlanResponse result = apiInstance.getPlanById1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#getPlanById1");
@@ -223,8 +223,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -241,7 +241,7 @@ No authorization required
 
 <a name="getPlanDefaultByApiId1"></a>
 # **getPlanDefaultByApiId1**
-> PlanResponse getPlanDefaultByApiId1(id, sensediaAuth)
+> PlanResponse getPlanDefaultByApiId1(sensediaAuth, id)
 
 Find default plan by api id
 
@@ -253,10 +253,10 @@ Find default plan by api id
 
 
 PlansApi apiInstance = new PlansApi();
-String id = "id_example"; // String | Api id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Api id
 try {
-    PlanResponse result = apiInstance.getPlanDefaultByApiId1(id, sensediaAuth);
+    PlanResponse result = apiInstance.getPlanDefaultByApiId1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#getPlanDefaultByApiId1");
@@ -268,8 +268,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Api id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -312,7 +312,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -329,7 +329,7 @@ No authorization required
 
 <a name="removePlan1"></a>
 # **removePlan1**
-> ResponseEntity removePlan1(id, sensediaAuth)
+> ResponseEntity removePlan1(sensediaAuth, id)
 
 Delete a plan
 
@@ -341,10 +341,10 @@ Delete a plan
 
 
 PlansApi apiInstance = new PlansApi();
-String id = "id_example"; // String | Plan id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Plan id
 try {
-    ResponseEntity result = apiInstance.removePlan1(id, sensediaAuth);
+    ResponseEntity result = apiInstance.removePlan1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#removePlan1");
@@ -356,8 +356,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Plan id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -374,7 +374,7 @@ No authorization required
 
 <a name="updatePlan1"></a>
 # **updatePlan1**
-> PlanResponse updatePlan1(id, sensediaAuth, planBean)
+> PlanResponse updatePlan1(sensediaAuth, id, planBean)
 
 Update a plan
 
@@ -386,11 +386,11 @@ Update a plan
 
 
 PlansApi apiInstance = new PlansApi();
-String id = "id_example"; // String | Plan id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Plan id
 PlanResponse planBean = new PlanResponse(); // PlanResponse | Plan json to update a plan
 try {
-    PlanResponse result = apiInstance.updatePlan1(id, sensediaAuth, planBean);
+    PlanResponse result = apiInstance.updatePlan1(sensediaAuth, id, planBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlansApi#updatePlan1");
@@ -402,8 +402,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Plan id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **planBean** | [**PlanResponse**](PlanResponse.md)| Plan json to update a plan | [optional]
 
 ### Return type
@@ -448,7 +448,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **planBean** | [**PlanResponse**](PlanResponse.md)| Plan json to validate a plan | [optional]
 
 ### Return type

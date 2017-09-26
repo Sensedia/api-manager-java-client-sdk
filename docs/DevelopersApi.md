@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="createOrUpdateDeveloper1"></a>
 # **createOrUpdateDeveloper1**
-> Developer createOrUpdateDeveloper1(login, bean, sensediaAuth)
+> Developer createOrUpdateDeveloper1(sensediaAuth, login, bean)
 
 Create or update developer
 
@@ -26,11 +26,11 @@ Create or update developer
 
 
 DevelopersApi apiInstance = new DevelopersApi();
+String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 String login = "login_example"; // String | Developer Login
 Developer bean = new Developer(); // Developer | bean
-String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 try {
-    Developer result = apiInstance.createOrUpdateDeveloper1(login, bean, sensediaAuth);
+    Developer result = apiInstance.createOrUpdateDeveloper1(sensediaAuth, login, bean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DevelopersApi#createOrUpdateDeveloper1");
@@ -42,9 +42,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **login** | **String**| Developer Login |
  **bean** | [**Developer**](Developer.md)| bean |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -104,7 +104,7 @@ No authorization required
 
 <a name="removeDeveloper1"></a>
 # **removeDeveloper1**
-> removeDeveloper1(login, sensediaAuth)
+> removeDeveloper1(sensediaAuth, login)
 
 Delete developer
 
@@ -116,10 +116,10 @@ Delete developer
 
 
 DevelopersApi apiInstance = new DevelopersApi();
-String login = "login_example"; // String | Developer Login
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String login = "login_example"; // String | Developer Login
 try {
-    apiInstance.removeDeveloper1(login, sensediaAuth);
+    apiInstance.removeDeveloper1(sensediaAuth, login);
 } catch (ApiException e) {
     System.err.println("Exception when calling DevelopersApi#removeDeveloper1");
     e.printStackTrace();
@@ -130,8 +130,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **login** | **String**| Developer Login |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -148,7 +148,7 @@ No authorization required
 
 <a name="retriveChangeLogByUsername1"></a>
 # **retriveChangeLogByUsername1**
-> List&lt;ChangeLogBean&gt; retriveChangeLogByUsername1(username, sensediaAuth)
+> List&lt;ChangeLogBean&gt; retriveChangeLogByUsername1(sensediaAuth, username)
 
 Retrive audit developer per username
 
@@ -160,10 +160,10 @@ Retrive audit developer per username
 
 
 DevelopersApi apiInstance = new DevelopersApi();
-String username = "username_example"; // String | Developer username
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String username = "username_example"; // String | Developer username
 try {
-    List<ChangeLogBean> result = apiInstance.retriveChangeLogByUsername1(username, sensediaAuth);
+    List<ChangeLogBean> result = apiInstance.retriveChangeLogByUsername1(sensediaAuth, username);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DevelopersApi#retriveChangeLogByUsername1");
@@ -175,8 +175,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **username** | **String**| Developer username |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -193,7 +193,7 @@ No authorization required
 
 <a name="retriveDeveloperByLogin1"></a>
 # **retriveDeveloperByLogin1**
-> Developer retriveDeveloperByLogin1(login, sensediaAuth)
+> Developer retriveDeveloperByLogin1(sensediaAuth, login)
 
 Retrive developer per Login
 
@@ -205,10 +205,10 @@ Retrive developer per Login
 
 
 DevelopersApi apiInstance = new DevelopersApi();
-String login = "login_example"; // String | Developer Login
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String login = "login_example"; // String | Developer Login
 try {
-    Developer result = apiInstance.retriveDeveloperByLogin1(login, sensediaAuth);
+    Developer result = apiInstance.retriveDeveloperByLogin1(sensediaAuth, login);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DevelopersApi#retriveDeveloperByLogin1");
@@ -220,8 +220,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **login** | **String**| Developer Login |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -269,7 +269,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **loginOrEmail** | **String**| Login or E-mail | [optional]
  **name** | **String**| Developer Name | [optional]
  **email** | **String**| Developer E-mail | [optional]

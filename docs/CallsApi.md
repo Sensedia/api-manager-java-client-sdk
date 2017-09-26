@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="retriveCallById1"></a>
 # **retriveCallById1**
-> Call retriveCallById1(id, sensediaAuth)
+> Call retriveCallById1(sensediaAuth, id)
 
 Retrive call by id
 
@@ -23,10 +23,10 @@ Retrive call by id
 
 
 CallsApi apiInstance = new CallsApi();
-String id = "id_example"; // String | Call id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Call id
 try {
-    Call result = apiInstance.retriveCallById1(id, sensediaAuth);
+    Call result = apiInstance.retriveCallById1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CallsApi#retriveCallById1");
@@ -38,8 +38,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Call id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -102,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **actualPage** | **Integer**| Number of the page in pagination. The starting page number is zero. | [optional]
  **baseUris** | **String**| Base uris | [optional]
  **appTokenCode** | **String**| Code app token | [optional]
@@ -139,7 +139,7 @@ No authorization required
 
 <a name="retriveTotalCallsByDate1"></a>
 # **retriveTotalCallsByDate1**
-> Long retriveTotalCallsByDate1(date, sensediaAuth, apiId)
+> Long retriveTotalCallsByDate1(sensediaAuth, date, apiId)
 
 Retrive calls total by date
 
@@ -151,11 +151,11 @@ Retrive calls total by date
 
 
 CallsApi apiInstance = new CallsApi();
-String date = "date_example"; // String | Date searched
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String date = "date_example"; // String | Date searched
 Long apiId = 789L; // Long | API id
 try {
-    Long result = apiInstance.retriveTotalCallsByDate1(date, sensediaAuth, apiId);
+    Long result = apiInstance.retriveTotalCallsByDate1(sensediaAuth, date, apiId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CallsApi#retriveTotalCallsByDate1");
@@ -167,8 +167,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **date** | **String**| Date searched |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **apiId** | **Long**| API id | [optional]
 
 ### Return type

@@ -9,8 +9,8 @@ Method | HTTP request | Description
 [**getAppTokenByAppGallery1**](AppsApi.md#getAppTokenByAppGallery1) | **GET** /apps/gallery | Return all apps
 [**getAppTokenByFilter1**](AppsApi.md#getAppTokenByFilter1) | **GET** /apps | Find app list by filters
 [**getAppTokenById1**](AppsApi.md#getAppTokenById1) | **GET** /apps/{code} | Find app by code
-[**getChangeLogByAppId1**](AppsApi.md#getChangeLogByAppId1) | **GET** /apps/{code}/changelog | Retrive changelog per app id
-[**removeApp1**](AppsApi.md#removeApp1) | **DELETE** /apps/{code} | Delete a app
+[**getChangeLogByAppId1**](AppsApi.md#getChangeLogByAppId1) | **GET** /apps/{id}/changelog | Retrive changelog per app id
+[**removeApp1**](AppsApi.md#removeApp1) | **DELETE** /apps/{id} | Delete a app
 [**updateApp1**](AppsApi.md#updateApp1) | **PUT** /apps/{id} | Update a app
 [**validatePartialApp1**](AppsApi.md#validatePartialApp1) | **POST** /apps/validate | Validate partial app
 
@@ -43,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **appTokenBean** | [**APP**](APP.md)| App json to create a new app. | [optional]
 
 ### Return type
@@ -131,7 +131,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -185,7 +185,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **clientId** | **String**| clientId | [optional]
  **name** | **String**| name | [optional]
  **keyword** | **String**| keyword | [optional]
@@ -213,7 +213,7 @@ No authorization required
 
 <a name="getAppTokenById1"></a>
 # **getAppTokenById1**
-> APP getAppTokenById1(code, sensediaAuth, limitAccessTokens, codeAccessTokens, filterAccessTokens)
+> APP getAppTokenById1(sensediaAuth, code, limitAccessTokens, codeAccessTokens, filterAccessTokens)
 
 Find app by code
 
@@ -225,13 +225,13 @@ Find app by code
 
 
 AppsApi apiInstance = new AppsApi();
-String code = "code_example"; // String | Client ID
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String code = "code_example"; // String | Client ID
 Integer limitAccessTokens = 56; // Integer | Limit the access token return
 String codeAccessTokens = "codeAccessTokens_example"; // String | Code access token
 Boolean filterAccessTokens = true; // Boolean | Filter access tokens
 try {
-    APP result = apiInstance.getAppTokenById1(code, sensediaAuth, limitAccessTokens, codeAccessTokens, filterAccessTokens);
+    APP result = apiInstance.getAppTokenById1(sensediaAuth, code, limitAccessTokens, codeAccessTokens, filterAccessTokens);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#getAppTokenById1");
@@ -243,8 +243,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **code** | **String**| Client ID |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **limitAccessTokens** | **Integer**| Limit the access token return | [optional]
  **codeAccessTokens** | **String**| Code access token | [optional]
  **filterAccessTokens** | **Boolean**| Filter access tokens | [optional]
@@ -264,7 +264,7 @@ No authorization required
 
 <a name="getChangeLogByAppId1"></a>
 # **getChangeLogByAppId1**
-> List&lt;ChangeLogBean&gt; getChangeLogByAppId1(id, sensediaAuth)
+> List&lt;ChangeLogBean&gt; getChangeLogByAppId1(sensediaAuth, id)
 
 Retrive changelog per app id
 
@@ -276,10 +276,10 @@ Retrive changelog per app id
 
 
 AppsApi apiInstance = new AppsApi();
-Long id = 789L; // Long | id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Long id = 789L; // Long | id
 try {
-    List<ChangeLogBean> result = apiInstance.getChangeLogByAppId1(id, sensediaAuth);
+    List<ChangeLogBean> result = apiInstance.getChangeLogByAppId1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#getChangeLogByAppId1");
@@ -291,8 +291,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **Long**| id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -309,7 +309,7 @@ No authorization required
 
 <a name="removeApp1"></a>
 # **removeApp1**
-> removeApp1(id, sensediaAuth)
+> removeApp1(sensediaAuth, id)
 
 Delete a app
 
@@ -321,10 +321,10 @@ Delete a app
 
 
 AppsApi apiInstance = new AppsApi();
-String id = "id_example"; // String | id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | id
 try {
-    apiInstance.removeApp1(id, sensediaAuth);
+    apiInstance.removeApp1(sensediaAuth, id);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#removeApp1");
     e.printStackTrace();
@@ -335,8 +335,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -353,7 +353,7 @@ No authorization required
 
 <a name="updateApp1"></a>
 # **updateApp1**
-> APPResponse updateApp1(id, appTokenBean, sensediaAuth)
+> APPResponse updateApp1(sensediaAuth, id, appTokenBean)
 
 Update a app
 
@@ -365,11 +365,11 @@ Update a app
 
 
 AppsApi apiInstance = new AppsApi();
+String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 String id = "id_example"; // String | App json to update a app.
 APP appTokenBean = new APP(); // APP | appTokenBean
-String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
 try {
-    APPResponse result = apiInstance.updateApp1(id, appTokenBean, sensediaAuth);
+    APPResponse result = apiInstance.updateApp1(sensediaAuth, id, appTokenBean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AppsApi#updateApp1");
@@ -381,9 +381,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| App json to update a app. |
  **appTokenBean** | [**APP**](APP.md)| appTokenBean |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -427,7 +427,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **appTokenBean** | [**APP**](APP.md)| App json to validate app | [optional]
 
 ### Return type

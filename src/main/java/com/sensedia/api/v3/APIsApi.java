@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class APIsApi {
   private ApiClient apiClient;
 
@@ -42,14 +42,19 @@ public class APIsApi {
   /**
    * Clone a API
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param apiBean API json to update a api (optional)
    * @return ModelAPIResponse
    * @throws ApiException if fails to make API call
    */
-  public ModelAPIResponse cloneApi1(String id, String sensediaAuth, API apiBean) throws ApiException {
+  public ModelAPIResponse cloneApi1(String sensediaAuth, String id, API apiBean) throws ApiException {
     Object localVarPostBody = apiBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling cloneApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -88,13 +93,18 @@ public class APIsApi {
   /**
    * Create a new API
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param bean API json to create a API (optional)
    * @return ModelAPIResponse
    * @throws ApiException if fails to make API call
    */
   public ModelAPIResponse createApi1(String sensediaAuth, APICreateBean bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createApi1");
+    }
     
     // create path and map variables
     String localVarPath = "/apis";
@@ -127,14 +137,19 @@ public class APIsApi {
   /**
    * Create new version
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param apiBean API json to update a api (optional)
    * @return ModelAPIResponse
    * @throws ApiException if fails to make API call
    */
-  public ModelAPIResponse createNewVersion1(String id, String sensediaAuth, API apiBean) throws ApiException {
+  public ModelAPIResponse createNewVersion1(String sensediaAuth, String id, API apiBean) throws ApiException {
     Object localVarPostBody = apiBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createNewVersion1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -173,14 +188,19 @@ public class APIsApi {
   /**
    * Find API by id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param apiId API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param filter Filter type searched (optional)
    * @return API
    * @throws ApiException if fails to make API call
    */
-  public API getApiById1(String apiId, String sensediaAuth, String filter) throws ApiException {
+  public API getApiById1(String sensediaAuth, String apiId, String filter) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getApiById1");
+    }
     
     // verify the required parameter 'apiId' is set
     if (apiId == null) {
@@ -220,7 +240,7 @@ public class APIsApi {
   /**
    * Return all APIs
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param privateAPI Private API (optional)
    * @param filter Filter type searched (optional)
    * @return List&lt;API&gt;
@@ -228,6 +248,11 @@ public class APIsApi {
    */
   public List<API> getApis1(String sensediaAuth, Boolean privateAPI, String filter) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getApis1");
+    }
     
     // create path and map variables
     String localVarPath = "/apis";
@@ -262,13 +287,18 @@ public class APIsApi {
   /**
    * Retrive changelog per API id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;ChangeLog&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<ChangeLog> getChangeLogByApiId1(Long id, String sensediaAuth) throws ApiException {
+  public List<ChangeLog> getChangeLogByApiId1(String sensediaAuth, Long id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getChangeLogByApiId1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -307,13 +337,18 @@ public class APIsApi {
   /**
    * Find last revision by API id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return RevisionBean
    * @throws ApiException if fails to make API call
    */
-  public RevisionBean getLastRevisionByApi1(Long id, String sensediaAuth) throws ApiException {
+  public RevisionBean getLastRevisionByApi1(String sensediaAuth, Long id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getLastRevisionByApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -352,13 +387,18 @@ public class APIsApi {
   /**
    * Find version by API id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;API&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<API> getVersionsByApi1(String id, String sensediaAuth) throws ApiException {
+  public List<API> getVersionsByApi1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getVersionsByApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -397,13 +437,18 @@ public class APIsApi {
   /**
    * Delete a API
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return ResponseEntity
    * @throws ApiException if fails to make API call
    */
-  public ResponseEntity removeApi1(String id, String sensediaAuth) throws ApiException {
+  public ResponseEntity removeApi1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removeApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -442,14 +487,19 @@ public class APIsApi {
   /**
    * Delete environment link with API
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
    * @param environmentId environmentId (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return ResponseEntity
    * @throws ApiException if fails to make API call
    */
-  public ResponseEntity removeLinkEnvironmentWithApi1(String id, String environmentId, String sensediaAuth) throws ApiException {
+  public ResponseEntity removeLinkEnvironmentWithApi1(String sensediaAuth, String id, String environmentId) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removeLinkEnvironmentWithApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -494,14 +544,19 @@ public class APIsApi {
   /**
    * Update a API
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id API id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param apiBean API json to update a api (optional)
    * @return ModelAPIResponse
    * @throws ApiException if fails to make API call
    */
-  public ModelAPIResponse updateApi1(String id, String sensediaAuth, API apiBean) throws ApiException {
+  public ModelAPIResponse updateApi1(String sensediaAuth, String id, API apiBean) throws ApiException {
     Object localVarPostBody = apiBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling updateApi1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -540,13 +595,18 @@ public class APIsApi {
   /**
    * Validate partial a API
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param bean API json to validate a API (optional)
    * @return ResponseEntity
    * @throws ApiException if fails to make API call
    */
   public ResponseEntity validatePartialApi1(String sensediaAuth, API bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling validatePartialApi1");
+    }
     
     // create path and map variables
     String localVarPath = "/apis/validate";

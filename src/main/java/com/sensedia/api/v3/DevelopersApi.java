@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class DevelopersApi {
   private ApiClient apiClient;
 
@@ -38,14 +38,19 @@ public class DevelopersApi {
   /**
    * Create or update developer
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param login Developer Login (required)
    * @param bean bean (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return Developer
    * @throws ApiException if fails to make API call
    */
-  public Developer createOrUpdateDeveloper1(String login, Developer bean, String sensediaAuth) throws ApiException {
+  public Developer createOrUpdateDeveloper1(String sensediaAuth, String login, Developer bean) throws ApiException {
     Object localVarPostBody = bean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createOrUpdateDeveloper1");
+    }
     
     // verify the required parameter 'login' is set
     if (login == null) {
@@ -89,12 +94,17 @@ public class DevelopersApi {
   /**
    * Retrieve developers total
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return Long
    * @throws ApiException if fails to make API call
    */
   public Long developersCount1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling developersCount1");
+    }
     
     // create path and map variables
     String localVarPath = "/developers/count";
@@ -127,12 +137,17 @@ public class DevelopersApi {
   /**
    * Delete developer
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param login Developer Login (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @throws ApiException if fails to make API call
    */
-  public void removeDeveloper1(String login, String sensediaAuth) throws ApiException {
+  public void removeDeveloper1(String sensediaAuth, String login) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removeDeveloper1");
+    }
     
     // verify the required parameter 'login' is set
     if (login == null) {
@@ -171,13 +186,18 @@ public class DevelopersApi {
   /**
    * Retrive audit developer per username
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param username Developer username (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;ChangeLogBean&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<ChangeLogBean> retriveChangeLogByUsername1(String username, String sensediaAuth) throws ApiException {
+  public List<ChangeLogBean> retriveChangeLogByUsername1(String sensediaAuth, String username) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveChangeLogByUsername1");
+    }
     
     // verify the required parameter 'username' is set
     if (username == null) {
@@ -216,13 +236,18 @@ public class DevelopersApi {
   /**
    * Retrive developer per Login
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param login Developer Login (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return Developer
    * @throws ApiException if fails to make API call
    */
-  public Developer retriveDeveloperByLogin1(String login, String sensediaAuth) throws ApiException {
+  public Developer retriveDeveloperByLogin1(String sensediaAuth, String login) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveDeveloperByLogin1");
+    }
     
     // verify the required parameter 'login' is set
     if (login == null) {
@@ -261,7 +286,7 @@ public class DevelopersApi {
   /**
    * Retrive developers
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param loginOrEmail Login or E-mail (optional)
    * @param name Developer Name (optional)
    * @param email Developer E-mail (optional)
@@ -272,6 +297,11 @@ public class DevelopersApi {
    */
   public List<Developer> retriveDevelopers1(String sensediaAuth, String loginOrEmail, String name, String email, Integer actualPage, Integer pageSize) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling retriveDevelopers1");
+    }
     
     // create path and map variables
     String localVarPath = "/developers";

@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class PlansApi {
   private ApiClient apiClient;
 
@@ -39,13 +39,18 @@ public class PlansApi {
   /**
    * Clone a plan
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Plan id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return PlanResponse
    * @throws ApiException if fails to make API call
    */
-  public PlanResponse clonePlan1(String id, String sensediaAuth) throws ApiException {
+  public PlanResponse clonePlan1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling clonePlan1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -84,13 +89,18 @@ public class PlansApi {
   /**
    * Create a new plan
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param planBean planBean (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return PlanResponse
    * @throws ApiException if fails to make API call
    */
-  public PlanResponse createPlan1(PlanResponse planBean, String sensediaAuth) throws ApiException {
+  public PlanResponse createPlan1(String sensediaAuth, PlanResponse planBean) throws ApiException {
     Object localVarPostBody = planBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createPlan1");
+    }
     
     // verify the required parameter 'planBean' is set
     if (planBean == null) {
@@ -128,12 +138,17 @@ public class PlansApi {
   /**
    * Return all plan
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return List&lt;PlanResponse&gt;
    * @throws ApiException if fails to make API call
    */
   public List<PlanResponse> getAllPlan1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAllPlan1");
+    }
     
     // create path and map variables
     String localVarPath = "/plans";
@@ -166,13 +181,18 @@ public class PlansApi {
   /**
    * Retrive changelog per plan id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;ChangeLogBean&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<ChangeLogBean> getChangeLogByPlanId1(Long id, String sensediaAuth) throws ApiException {
+  public List<ChangeLogBean> getChangeLogByPlanId1(String sensediaAuth, Long id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getChangeLogByPlanId1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -211,13 +231,18 @@ public class PlansApi {
   /**
    * Find plan by id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return PlanResponse
    * @throws ApiException if fails to make API call
    */
-  public PlanResponse getPlanById1(String id, String sensediaAuth) throws ApiException {
+  public PlanResponse getPlanById1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getPlanById1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -256,13 +281,18 @@ public class PlansApi {
   /**
    * Find default plan by api id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Api id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return PlanResponse
    * @throws ApiException if fails to make API call
    */
-  public PlanResponse getPlanDefaultByApiId1(String id, String sensediaAuth) throws ApiException {
+  public PlanResponse getPlanDefaultByApiId1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getPlanDefaultByApiId1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -301,12 +331,17 @@ public class PlansApi {
   /**
    * Retrieve plan total
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return Long
    * @throws ApiException if fails to make API call
    */
   public Long plansCount1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling plansCount1");
+    }
     
     // create path and map variables
     String localVarPath = "/plans/count";
@@ -339,13 +374,18 @@ public class PlansApi {
   /**
    * Delete a plan
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Plan id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return ResponseEntity
    * @throws ApiException if fails to make API call
    */
-  public ResponseEntity removePlan1(String id, String sensediaAuth) throws ApiException {
+  public ResponseEntity removePlan1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removePlan1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -384,14 +424,19 @@ public class PlansApi {
   /**
    * Update a plan
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id Plan id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param planBean Plan json to update a plan (optional)
    * @return PlanResponse
    * @throws ApiException if fails to make API call
    */
-  public PlanResponse updatePlan1(String id, String sensediaAuth, PlanResponse planBean) throws ApiException {
+  public PlanResponse updatePlan1(String sensediaAuth, String id, PlanResponse planBean) throws ApiException {
     Object localVarPostBody = planBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling updatePlan1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -430,13 +475,18 @@ public class PlansApi {
   /**
    * Validate partial a plan
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param planBean Plan json to validate a plan (optional)
    * @return ResponseEntity
    * @throws ApiException if fails to make API call
    */
   public ResponseEntity validatePartialPlan1(String sensediaAuth, PlanResponse planBean) throws ApiException {
     Object localVarPostBody = planBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling validatePartialPlan1");
+    }
     
     // create path and map variables
     String localVarPath = "/plans/validate";

@@ -29,7 +29,7 @@ import org.joda.time.DateTime;
  * APP model
  */
 @ApiModel(description = "APP model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class APP {
   @JsonProperty("accessTokens")
   private List<AuthTokenSimpleBean> accessTokens = null;

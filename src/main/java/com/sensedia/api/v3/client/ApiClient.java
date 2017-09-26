@@ -49,10 +49,10 @@ import com.sensedia.api.v3.client.auth.HttpBasicAuth;
 import com.sensedia.api.v3.client.auth.ApiKeyAuth;
 import com.sensedia.api.v3.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
-  private String basePath = "http://localhost/api-manager/api/v3";
+  private String basePath = "https://localhost/api-manager/api/v3";
   private boolean debugging = false;
   private int connectionTimeout = 0;
 

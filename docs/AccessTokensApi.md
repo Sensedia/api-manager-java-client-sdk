@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
 
 ### Return type
 
@@ -86,7 +86,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **bean** | [**AccessToken**](AccessToken.md)| Access token json to create a new access token. | [optional]
 
 ### Return type
@@ -143,7 +143,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **code** | **String**| code | [optional]
  **owner** | **String**| owner | [optional]
  **status** | **String**| staus(ACTIVE, REVOKED, EXPIRED) | [optional]
@@ -173,7 +173,7 @@ No authorization required
 
 <a name="getChangeLogByAccessTokenId1"></a>
 # **getChangeLogByAccessTokenId1**
-> List&lt;ChangeLogBean&gt; getChangeLogByAccessTokenId1(id, sensediaAuth)
+> List&lt;ChangeLogBean&gt; getChangeLogByAccessTokenId1(sensediaAuth, id)
 
 Retrive changelog per access token id
 
@@ -185,10 +185,10 @@ Retrive changelog per access token id
 
 
 AccessTokensApi apiInstance = new AccessTokensApi();
-Long id = 789L; // Long | Access token id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+Long id = 789L; // Long | Access token id
 try {
-    List<ChangeLogBean> result = apiInstance.getChangeLogByAccessTokenId1(id, sensediaAuth);
+    List<ChangeLogBean> result = apiInstance.getChangeLogByAccessTokenId1(sensediaAuth, id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccessTokensApi#getChangeLogByAccessTokenId1");
@@ -200,8 +200,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **Long**| Access token id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -218,7 +218,7 @@ No authorization required
 
 <a name="getTokenByCode1"></a>
 # **getTokenByCode1**
-> AccessToken getTokenByCode1(code, sensediaAuth)
+> AccessToken getTokenByCode1(sensediaAuth, code)
 
 Find access token by code
 
@@ -230,10 +230,10 @@ Find access token by code
 
 
 AccessTokensApi apiInstance = new AccessTokensApi();
-String code = "code_example"; // String | Code
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String code = "code_example"; // String | Code
 try {
-    AccessToken result = apiInstance.getTokenByCode1(code, sensediaAuth);
+    AccessToken result = apiInstance.getTokenByCode1(sensediaAuth, code);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccessTokensApi#getTokenByCode1");
@@ -245,8 +245,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **code** | **String**| Code |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -263,7 +263,7 @@ No authorization required
 
 <a name="removeAccessToken1"></a>
 # **removeAccessToken1**
-> removeAccessToken1(id, sensediaAuth)
+> removeAccessToken1(sensediaAuth, id)
 
 Remove a access token
 
@@ -275,10 +275,10 @@ Remove a access token
 
 
 AccessTokensApi apiInstance = new AccessTokensApi();
-String id = "id_example"; // String | App id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | App id
 try {
-    apiInstance.removeAccessToken1(id, sensediaAuth);
+    apiInstance.removeAccessToken1(sensediaAuth, id);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccessTokensApi#removeAccessToken1");
     e.printStackTrace();
@@ -289,8 +289,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| App id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
 
 ### Return type
 
@@ -307,7 +307,7 @@ No authorization required
 
 <a name="updateAccesstoken1"></a>
 # **updateAccesstoken1**
-> AccessTokenResponse updateAccesstoken1(id, sensediaAuth, bean)
+> AccessTokenResponse updateAccesstoken1(sensediaAuth, id, bean)
 
 Update a access token
 
@@ -319,11 +319,11 @@ Update a access token
 
 
 AccessTokensApi apiInstance = new AccessTokensApi();
-String id = "id_example"; // String | Access token id
 String sensediaAuth = "sensediaAuth_example"; // String | Sensedia-Auth
+String id = "id_example"; // String | Access token id
 AccessToken bean = new AccessToken(); // AccessToken | Access token json to update a access token.
 try {
-    AccessTokenResponse result = apiInstance.updateAccesstoken1(id, sensediaAuth, bean);
+    AccessTokenResponse result = apiInstance.updateAccesstoken1(sensediaAuth, id, bean);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccessTokensApi#updateAccesstoken1");
@@ -335,8 +335,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **id** | **String**| Access token id |
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
  **bean** | [**AccessToken**](AccessToken.md)| Access token json to update a access token. | [optional]
 
 ### Return type
@@ -381,7 +381,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sensediaAuth** | **String**| Sensedia-Auth | [optional]
+ **sensediaAuth** | **String**| Sensedia-Auth |
  **bean** | [**AccessToken**](AccessToken.md)| Access token json to validate a access token. | [optional]
 
 ### Return type

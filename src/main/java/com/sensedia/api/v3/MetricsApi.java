@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class MetricsApi {
   private ApiClient apiClient;
 
@@ -44,7 +44,7 @@ public class MetricsApi {
   /**
    * Find access token consolited by month
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param resolution Metric resolution (optional)
@@ -53,6 +53,11 @@ public class MetricsApi {
    */
   public List<TokensMetric> getAccessTokensByMonth1(String sensediaAuth, String beginDate, String endDate, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAccessTokensByMonth1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/access-tokens";
@@ -88,7 +93,7 @@ public class MetricsApi {
   /**
    * Find apps consolited by month
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param resolution Metric resolution (optional)
@@ -97,6 +102,11 @@ public class MetricsApi {
    */
   public List<TokensMetric> getAppsByMonth1(String sensediaAuth, String beginDate, String endDate, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAppsByMonth1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/apps";
@@ -132,7 +142,7 @@ public class MetricsApi {
   /**
    * Find cache
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param apiId API id (optional)
    * @param revisionId Revision id (optional)
    * @param operationId Operation id (optional)
@@ -145,6 +155,11 @@ public class MetricsApi {
    */
   public List<OperationMetric> getCache1(String sensediaAuth, Long apiId, Long revisionId, Long operationId, Long environmentId, String beginDate, String endDate, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getCache1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/cache";
@@ -184,7 +199,7 @@ public class MetricsApi {
   /**
    * Find cache latency
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param apiId API id (optional)
    * @param revisionId Revision id (optional)
    * @param operationId Operation id (optional)
@@ -197,6 +212,11 @@ public class MetricsApi {
    */
   public List<OperationMetric> getCacheLatency1(String sensediaAuth, Long apiId, Long revisionId, Long operationId, Long environmentId, String beginDate, String endDate, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getCacheLatency1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/cache/latency";
@@ -236,7 +256,7 @@ public class MetricsApi {
   /**
    * Retrive cache size
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param apiId API id (optional)
    * @param revisionId Revision id (optional)
    * @param operationId Operation id (optional)
@@ -246,6 +266,11 @@ public class MetricsApi {
    */
   public CacheMetric getCacheSize1(String sensediaAuth, Long apiId, Long revisionId, Long operationId, Long environmentId) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getCacheSize1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/cache/size";
@@ -282,7 +307,7 @@ public class MetricsApi {
   /**
    * Find calls by month
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param resolution Metric resolution (optional)
@@ -294,6 +319,11 @@ public class MetricsApi {
    */
   public List<CallsMetric> getCallsByMonth1(String sensediaAuth, String beginDate, String endDate, String resolution, Long environmentId, Long apiId, Long revisionId) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getCallsByMonth1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/calls";
@@ -332,13 +362,18 @@ public class MetricsApi {
   /**
    * Find Health
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param healthPortal Health Portal (optional)
    * @return List&lt;OperationHealth&gt;
    * @throws ApiException if fails to make API call
    */
   public List<OperationHealth> getHealth1(String sensediaAuth, Boolean healthPortal) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getHealth1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/health";
@@ -372,7 +407,7 @@ public class MetricsApi {
   /**
    * Find latency by month
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param resolution Metric resolution (optional)
@@ -381,6 +416,11 @@ public class MetricsApi {
    */
   public List<LatencyMetric> getLatencyByMonth1(String sensediaAuth, String beginDate, String endDate, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getLatencyByMonth1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/latency";
@@ -416,12 +456,17 @@ public class MetricsApi {
   /**
    * Retrive Status Error
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return Integer
    * @throws ApiException if fails to make API call
    */
   public Integer getStatusError1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getStatusError1");
+    }
     
     // create path and map variables
     String localVarPath = "/metrics/statusError";
@@ -454,8 +499,8 @@ public class MetricsApi {
   /**
    * Find top access token
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param howMany How many (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param status Metric status (optional)
@@ -463,8 +508,13 @@ public class MetricsApi {
    * @return List&lt;TopAccessToken&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<TopAccessToken> getTopAccessTokens1(Integer howMany, String sensediaAuth, String beginDate, String endDate, String status, String resolution) throws ApiException {
+  public List<TopAccessToken> getTopAccessTokens1(String sensediaAuth, Integer howMany, String beginDate, String endDate, String status, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getTopAccessTokens1");
+    }
     
     // verify the required parameter 'howMany' is set
     if (howMany == null) {
@@ -507,8 +557,8 @@ public class MetricsApi {
   /**
    * Find top apps
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param howMany How many (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param beginDate Begin date (optional)
    * @param endDate End date (optional)
    * @param status Metric status (optional)
@@ -516,8 +566,13 @@ public class MetricsApi {
    * @return List&lt;TopApp&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<TopApp> getTopApps1(Integer howMany, String sensediaAuth, String beginDate, String endDate, String status, String resolution) throws ApiException {
+  public List<TopApp> getTopApps1(String sensediaAuth, Integer howMany, String beginDate, String endDate, String status, String resolution) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getTopApps1");
+    }
     
     // verify the required parameter 'howMany' is set
     if (howMany == null) {

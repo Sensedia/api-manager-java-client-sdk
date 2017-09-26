@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-06T11:21:38.562-03:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-09-25T23:40:42.718-03:00")
 public class AppsApi {
   private ApiClient apiClient;
 
@@ -39,12 +39,17 @@ public class AppsApi {
   /**
    * Retrieve App total
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return Long
    * @throws ApiException if fails to make API call
    */
   public Long appsCount1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling appsCount1");
+    }
     
     // create path and map variables
     String localVarPath = "/apps/count";
@@ -77,13 +82,18 @@ public class AppsApi {
   /**
    * Create a new app
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param appTokenBean App json to create a new app. (optional)
    * @return APPResponse
    * @throws ApiException if fails to make API call
    */
   public APPResponse createApp1(String sensediaAuth, APP appTokenBean) throws ApiException {
     Object localVarPostBody = appTokenBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling createApp1");
+    }
     
     // create path and map variables
     String localVarPath = "/apps";
@@ -116,12 +126,17 @@ public class AppsApi {
   /**
    * Return all apps
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @return List&lt;APP&gt;
    * @throws ApiException if fails to make API call
    */
   public List<APP> getAppTokenByAppGallery1(String sensediaAuth) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAppTokenByAppGallery1");
+    }
     
     // create path and map variables
     String localVarPath = "/apps/gallery";
@@ -154,7 +169,7 @@ public class AppsApi {
   /**
    * Find app list by filters
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param clientId clientId (optional)
    * @param name name (optional)
    * @param keyword keyword (optional)
@@ -171,6 +186,11 @@ public class AppsApi {
    */
   public List<APP> getAppTokenByFilter1(String sensediaAuth, String clientId, String name, String keyword, String status, String developer, Integer actualPage, Integer pageSize, String appIds, String beginDate, String endDate, String extraFields) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAppTokenByFilter1");
+    }
     
     // create path and map variables
     String localVarPath = "/apps";
@@ -214,16 +234,21 @@ public class AppsApi {
   /**
    * Find app by code
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param code Client ID (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @param limitAccessTokens Limit the access token return (optional)
    * @param codeAccessTokens Code access token (optional)
    * @param filterAccessTokens Filter access tokens (optional)
    * @return APP
    * @throws ApiException if fails to make API call
    */
-  public APP getAppTokenById1(String code, String sensediaAuth, Integer limitAccessTokens, String codeAccessTokens, Boolean filterAccessTokens) throws ApiException {
+  public APP getAppTokenById1(String sensediaAuth, String code, Integer limitAccessTokens, String codeAccessTokens, Boolean filterAccessTokens) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getAppTokenById1");
+    }
     
     // verify the required parameter 'code' is set
     if (code == null) {
@@ -265,13 +290,18 @@ public class AppsApi {
   /**
    * Retrive changelog per app id
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return List&lt;ChangeLogBean&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<ChangeLogBean> getChangeLogByAppId1(Long id, String sensediaAuth) throws ApiException {
+  public List<ChangeLogBean> getChangeLogByAppId1(String sensediaAuth, Long id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling getChangeLogByAppId1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -279,7 +309,7 @@ public class AppsApi {
     }
     
     // create path and map variables
-    String localVarPath = "/apps/{code}/changelog"
+    String localVarPath = "/apps/{id}/changelog"
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -310,12 +340,17 @@ public class AppsApi {
   /**
    * Delete a app
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id id (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @throws ApiException if fails to make API call
    */
-  public void removeApp1(String id, String sensediaAuth) throws ApiException {
+  public void removeApp1(String sensediaAuth, String id) throws ApiException {
     Object localVarPostBody = null;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling removeApp1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -323,7 +358,7 @@ public class AppsApi {
     }
     
     // create path and map variables
-    String localVarPath = "/apps/{code}"
+    String localVarPath = "/apps/{id}"
       .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
 
     // query params
@@ -354,14 +389,19 @@ public class AppsApi {
   /**
    * Update a app
    * 
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param id App json to update a app. (required)
    * @param appTokenBean appTokenBean (required)
-   * @param sensediaAuth Sensedia-Auth (optional)
    * @return APPResponse
    * @throws ApiException if fails to make API call
    */
-  public APPResponse updateApp1(String id, APP appTokenBean, String sensediaAuth) throws ApiException {
+  public APPResponse updateApp1(String sensediaAuth, String id, APP appTokenBean) throws ApiException {
     Object localVarPostBody = appTokenBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling updateApp1");
+    }
     
     // verify the required parameter 'id' is set
     if (id == null) {
@@ -405,13 +445,18 @@ public class AppsApi {
   /**
    * Validate partial app
    * 
-   * @param sensediaAuth Sensedia-Auth (optional)
+   * @param sensediaAuth Sensedia-Auth (required)
    * @param appTokenBean App json to validate app (optional)
    * @return Object
    * @throws ApiException if fails to make API call
    */
   public Object validatePartialApp1(String sensediaAuth, APP appTokenBean) throws ApiException {
     Object localVarPostBody = appTokenBean;
+    
+    // verify the required parameter 'sensediaAuth' is set
+    if (sensediaAuth == null) {
+      throw new ApiException(400, "Missing the required parameter 'sensediaAuth' when calling validatePartialApp1");
+    }
     
     // create path and map variables
     String localVarPath = "/apps/validate";
